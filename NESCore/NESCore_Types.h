@@ -24,13 +24,15 @@
 #ifndef NESCORE_TYPES_H
 #define NESCORE_TYPES_H
 
+#include <stdint.h>
+
 #ifndef DWORD_TYPE_DEFINED
-typedef unsigned long dword;
+typedef uint32_t dword;
 #define DWORD_TYPE_DEFINED
 #endif 
 
 #ifndef SDWORD_TYPE_DEFINED
-typedef signed long sdword;
+typedef int32_t sdword;
 #define SDWORD_TYPE_DEFINED
 #endif
 

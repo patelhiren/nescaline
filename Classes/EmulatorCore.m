@@ -24,7 +24,7 @@
 
 static EmulatorCore *sharedEmulatorCoreInstance = nil;
 extern word NESPalette[64];
-void setActiveFrameBuffer(unsigned long *buf);
+void setActiveFrameBuffer(uint32_t *buf);
 
 @implementation EmulatorCore
 @synthesize currentROMImagePath;
@@ -461,9 +461,9 @@ void setActiveFrameBuffer(unsigned long *buf);
 
 - (void)emulatorCallbackWait {
 	float frameRate = (S.PAL) ? 53.355 : 60.098;
-    signed long usec_per_frame = (1000000 / frameRate) * (S.FrameSkip + 1);
-    signed long usec_this_frame;
-    signed long delta;
+    int32_t usec_per_frame = (1000000 / frameRate) * (S.FrameSkip + 1);
+    int32_t usec_this_frame;
+    int32_t delta;
 	struct timeval tv;
 	
     if (gettimeofday(&tv, NULL))

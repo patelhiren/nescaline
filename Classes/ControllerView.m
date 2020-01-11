@@ -126,7 +126,7 @@
 		return;
 	}
 	
-	unsigned long dwKeyPad = controllerState[currentController];
+	uint32_t dwKeyPad = controllerState[currentController];
 
 	indicatorUp.hidden = YES;
 	indicatorDown.hidden = YES;

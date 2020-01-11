@@ -24,14 +24,14 @@
 #import "ControllerView.h"
 
 @interface ScreenView : UIView <EmulatorCoreScreenDelegate> {
-	unsigned long hightable[256], lowtable[256];
+	uint32_t hightable[256], lowtable[256];
 	int w, h;
 
 	CALayer *screenLayer;
 	UIDeviceOrientation orientation;
 	NSUserDefaults *settings;
 	unsigned short *frameBufferAddress;
-	unsigned long *frameBuffer8888;
+	uint32_t *frameBuffer8888;
 	CGSize frameBufferSize;
 	CGColorSpaceRef colorSpace;
 	CGDataProviderRef provider[2];

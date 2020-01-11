@@ -142,9 +142,9 @@ int NESCore_LoadROM(const char *fileName) {
 void NESCore_Callback_Wait(void *userData) {
     struct timeval tv;
     float frameRate = (S.PAL) ? 53.355 : 60.098;
-    signed long usec_per_frame = (1000000 / frameRate) * (S.FrameSkip + 1);
-    signed long usec_this_frame;
-    signed long delta;
+    long usec_per_frame = (1000000 / frameRate) * (S.FrameSkip + 1);
+    long usec_this_frame;
+    long delta;
 	
     if (gettimeofday(&tv, NULL))
         return;
@@ -1318,7 +1318,7 @@ void NESCore_Develop_Character_Data()
  */
 
 byte *NESCore_WireBank(struct NES_Wiring *I, byte *c, const char *desc) {
-    signed long dROM, dVROM, dSPRRAM, dPPURAM, dCHRRAM, dDRAM, dSRAM;
+    long dROM, dVROM, dSPRRAM, dPPURAM, dCHRRAM, dDRAM, dSRAM;
     
     dROM = W.ROM - I->ROM;
     dVROM = W.VROM - I->VROM;

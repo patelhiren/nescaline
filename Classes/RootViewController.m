@@ -308,10 +308,10 @@
 	[ emulatorCore configureEmulator ];
 	[ emulatorCore applyGameGenieCodes ];
 	
-	emulatorCore.screenDelegate = emulatorViewController.screenView;
-	emulatorCore.frameBufferAddress = (word *) emulatorViewController.screenView.frameBufferAddress;
 	emulatorCore.frameBufferSize = emulatorViewController.view.frame.size;
-	emulatorViewController.screenView.delegate = emulatorCore;
+	emulatorCore.frameBufferAddress = (word *) emulatorViewController.screenView.frameBufferAddress;
+    emulatorCore.screenDelegate = emulatorViewController.screenView;
+    emulatorViewController.screenView.delegate = emulatorCore;
 	emulatorViewController.controllerView.delegate = emulatorCore;
 	
 	navigationController.delegate = self;

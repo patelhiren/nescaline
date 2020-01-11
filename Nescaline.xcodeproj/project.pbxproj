@@ -578,6 +578,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Nescaline" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -654,9 +656,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jonathan Zdziarski (EM755399HC)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = XNCE899229;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
@@ -666,14 +671,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NES_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-g";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyllenge.Nescaline;
 				PRODUCT_NAME = Nescaline;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "53210C11-C375-48CD-9915-15F187B8DC4A";
+				PROVISIONING_PROFILE_SPECIFIER = "Domqiu Wildcard iOS Development ProvisioninProfile";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
-				VALID_ARCHS = "armv7s armv7";
+				VALID_ARCHS = "armv7s armv7 arm64e arm64";
 			};
 			name = Debug;
 		};
@@ -681,11 +688,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jonathan Zdziarski (EM755399HC)";
 				COMPRESS_PNG_FILES = YES;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = XNCE899229;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
@@ -696,14 +705,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NES_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-g";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyllenge.Nescaline;
 				PRODUCT_NAME = Nescaline;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "53210C11-C375-48CD-9915-15F187B8DC4A";
+				PROVISIONING_PROFILE_SPECIFIER = "Domqiu Wildcard iOS Development ProvisioninProfile";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
-				VALID_ARCHS = "armv7s armv7";
+				VALID_ARCHS = "armv7s armv7 arm64e arm64";
 			};
 			name = Release;
 		};
@@ -729,11 +740,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jonathan Zdziarski";
 				COMPRESS_PNG_FILES = YES;
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
@@ -744,7 +756,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NES_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-g";
 				PRODUCT_NAME = Nescaline;
@@ -752,7 +764,7 @@
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7s armv7";
+				VALID_ARCHS = "armv7s armv7 arm64e arm64";
 			};
 			name = Distribution;
 		};
