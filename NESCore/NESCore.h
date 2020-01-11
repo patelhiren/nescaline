@@ -195,7 +195,7 @@ struct NES_Wiring {
 
 struct NES_Mapper_State {
     void *state;
-    unsigned long size;
+    uint32_t size;
 };
 
 extern struct NES_State S;

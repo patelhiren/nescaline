@@ -69,7 +69,7 @@ typedef struct AQCallbackStruct {
 	
 	/* Resources for audio playback */
 	AQCallbackStruct audioCallback;
-	long writeNeedle, playNeedle;
+	int32_t writeNeedle, playNeedle;
 	int soundBuffersInitialized;
 	int requiredBuffersToOpenSound;
 	int defaultSoundBuffer;

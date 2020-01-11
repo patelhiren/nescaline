@@ -39,12 +39,12 @@
 {	
 	for (int i = 0; i < 256; i++)
 	{
-		unsigned long red = (unsigned long)((i & 31) * 255.0 / 31.0);
-		unsigned long lowgreen = (unsigned long)(((i >> 5) & 7) * 255.0 / 63.0);
+		uint32_t red = (uint32_t)((i & 31) * 255.0 / 31.0);
+		uint32_t lowgreen = (uint32_t)(((i >> 5) & 7) * 255.0 / 63.0);
 		lowtable[i] = red | (lowgreen << 8);
 		
-		unsigned long highgreen = (unsigned long)(((i & 7) << 3) * 255.0 / 63.0);
-		unsigned long blue = (unsigned long)((i >> 3) * 255.0 / 31.0);
+		uint32_t highgreen = (uint32_t)(((i & 7) << 3) * 255.0 / 63.0);
+		uint32_t blue = (uint32_t)((i >> 3) * 255.0 / 31.0);
 		hightable[i] = (blue << 16) | (highgreen << 8);
 	}
 }
@@ -167,6 +167,7 @@
 		for (x=0; x< w; x++)
 		{
 			px = frameBufferAddress[w*y+x];
+//            NSLog(@"px=%x, w*y+x=%d*%d+%d=%d", px, w, y, x, w*y+x);
 			frameBuffer8888[w*y+x] = hightable[px >> 8 ] + lowtable[px & 0xFF];
 		}		
 	}
